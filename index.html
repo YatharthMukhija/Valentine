@@ -21,7 +21,6 @@
     overflow: hidden;
   }
 
-  /* Floating hearts & sparkles */
   .float {
     position: absolute;
     animation: floatUp linear infinite;
@@ -93,7 +92,6 @@
     display: flex;
     justify-content: center;
     gap: 18px;
-    position: relative;
   }
 
   button {
@@ -144,16 +142,16 @@
   <h1>Hey <span class="name">Deepakshi</span> 💕</h1>
 
   <p>
-    I know I can be stupid sometimes,<br>
-    but I am really, truly in love with you 🥹
+    I know I am stupid sometimes,<br>
+    but I am really, truly in love with u 🥹
   </p>
 
   <p>
-    I want you to know that<br>
-    <strong>you are the best thing that has ever happened to me</strong> 💖
+    I want u to know that<br>
+    <strong>u are the best thing that has ever happened to me</strong> 💖
   </p>
 
-  <div class="question">Will you be my Valentine? 💘</div>
+  <div class="question">Will u be my Valentine? 💘</div>
 
   <div class="buttons">
     <button id="yes">Yes 💗</button>
@@ -170,8 +168,8 @@
   const noTexts = [
     "No 🙄",
     "Wait 😳",
-    "Are you sure?",
-    "Stoppp 😭",
+    "Are u sure?",
+    "Stop 😭",
     "This is hard 🥺",
     "Okay… maybe 😵"
   ];
@@ -188,10 +186,7 @@
     noBtn.style.transform = `translate(${x}px, ${y}px)`;
   }
 
-  // Desktop hover
   noBtn.addEventListener("mouseenter", teaseNo);
-
-  // Mobile + click
   noBtn.addEventListener("click", (e) => {
     e.preventDefault();
     teaseNo();
@@ -210,11 +205,11 @@
         font-family:'Comic Sans MS', cursive;
         padding:20px;
       ">
-        <h1 style="color:#ff2f7a;font-size:34px;">Thank you so much 💖</h1>
+        <h1 style="color:#ff2f7a;font-size:34px;">Thank u so much 💖</h1>
 
         <p style="font-size:20px;max-width:420px;">
-          Thank you so much for coming into my life 🥹✨<br>
-          You mean more to me than you know.
+          Thank u so much for coming in my life 🥹✨<br>
+          U really mean everything to me.
         </p>
 
         <p style="font-size:22px;color:#ff4d88;">
@@ -222,13 +217,12 @@
         </p>
 
         <p style="font-size:18px;">
-          See you on the 14th 😌💘
+          See u on 14th 💘
         </p>
       </div>
     `;
   });
 
-  // Floating hearts & sparkles
   setInterval(() => {
     const el = document.createElement("div");
     el.className = "float";
