@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Deepakshi 💖</title>
+
+<style>
+  * {
+    box-sizing: border-box;
+    user-select: none;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffe4f1, #ffb6d9);
+    font-family: 'Comic Sans MS', 'Poppins', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  /* Floating hearts & sparkles */
+  .float {
+    position: absolute;
+    animation: floatUp linear infinite;
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% {
+      transform: translateY(110vh) scale(0.6);
+      opacity: 0;
+    }
+    30% { opacity: 1; }
+    100% {
+      transform: translateY(-10vh) scale(1.4);
+      opacity: 0;
+    }
+  }
+
+  .card {
+    background: rgba(255,255,255,0.97);
+    padding: 45px 38px;
+    border-radius: 38px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(255, 77, 136, 0.35);
+    max-width: 420px;
+    animation: pop 1s ease;
+    z-index: 5;
+  }
+
+  @keyframes pop {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  h1 {
+    color: #ff2f7a;
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .name {
+    color: #ff4d88;
+    font-weight: bold;
+    animation: glow 1.6s infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 6px #ff9acb; }
+    to { text-shadow: 0 0 16px #ff4d88; }
+  }
+
+  p {
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .question {
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #ff2f7a;
+  }
+
+  .buttons {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    position: relative;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  #yes {
+    background: linear-gradient(135deg, #ff4d88, #ff77aa);
+    color: white;
+    box-shadow: 0 12px 25px rgba(255,77,136,0.45);
+  }
+
+  #yes:hover {
+    transform: scale(1.15);
+  }
+
+  #no {
+    background: #f3f3f3;
+    color: #999;
+    position: relative;
+    animation: wiggle 2.5s infinite;
+  }
+
+  @keyframes wiggle {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-1px); }
+    100% { transform: translateX(0); }
+  }
+
+  .footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ff77aa;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Hey <span class="name">Deepakshi</span> 💕</h1>
+
+  <p>
+    I know I can be stupid sometimes,<br>
+    but I am really, truly in love with you 🥹
+  </p>
+
+  <p>
+    I want you to know that<br>
+    <strong>you are the best thing that has ever happened to me</strong> 💖
+  </p>
+
+  <div class="question">Will you be my Valentine? 💘</div>
+
+  <div class="buttons">
+    <button id="yes">Yes 💗</button>
+    <button id="no">No 🙄</button>
+  </div>
+
+  <div class="footer">made with all my heart 💞</div>
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+  const yesBtn = document.getElementById("yes");
+
+  const noTexts = [
+    "No 🙄",
+    "Wait 😳",
+    "Are you sure?",
+    "Stoppp 😭",
+    "This is hard 🥺",
+    "Okay… maybe 😵"
+  ];
+
+  let noIndex = 0;
+
+  function teaseNo() {
+    noIndex = (noIndex + 1) % noTexts.length;
+    noBtn.textContent = noTexts[noIndex];
+
+    const x = Math.random() * 140 - 70;
+    const y = Math.random() * 40 - 20;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  // Desktop hover
+  noBtn.addEventListener("mouseenter", teaseNo);
+
+  // Mobile + click
+  noBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    teaseNo();
+  });
+
+  yesBtn.addEventListener("click", () => {
+    document.body.innerHTML = `
+      <div style="
+        height:100vh;
+        background:linear-gradient(135deg,#ffe4f1,#ffb6d9);
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        font-family:'Comic Sans MS', cursive;
+        padding:20px;
+      ">
+        <h1 style="color:#ff2f7a;font-size:34px;">Thank you so much 💖</h1>
+
+        <p style="font-size:20px;max-width:420px;">
+          Thank you so much for coming into my life 🥹✨<br>
+          You mean more to me than you know.
+        </p>
+
+        <p style="font-size:22px;color:#ff4d88;">
+          Happy Valentine’s Day ❤️
+        </p>
+
+        <p style="font-size:18px;">
+          See you on the 14th 😌💘
+        </p>
+      </div>
+    `;
+  });
+
+  // Floating hearts & sparkles
+  setInterval(() => {
+    const el = document.createElement("div");
+    el.className = "float";
+    el.innerHTML = Math.random() > 0.5 ? "💖" : "✨";
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.fontSize = Math.random() * 20 + 14 + "px";
+    el.style.animationDuration = Math.random() * 3 + 4 + "s";
+    document.body.appendChild(el);
+
+    setTimeout(() => el.remove(), 7000);
+  }, 280);
+</script>
+
+</body>
+</html>
